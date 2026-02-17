@@ -22,14 +22,15 @@ body{
   text-rendering: geometricPrecision;
 }
 
-/* center whole composition */
+/* stable viewport height */
 .stage{
-  height: 100vh;
+  height: 100vh;     /* fallback */
+  height: 100svh;    /* stable viewport on iOS */
   display: grid;
   place-items: center;
 }
 
-/* slightly top-weighted */
+/* slightly top-weighted (desktop) */
 .stack{
   display: flex;
   flex-direction: column;
@@ -68,24 +69,24 @@ body{
   outline-offset: 4px;
 }
 
-/* name below links: gently articulated gap */
+/* name below links */
 .name{
   margin: 0;
-  margin-top: 3.0rem;
+  margin-top: 3rem;      /* gently articulated gap */
   font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-weight: 400;
   color: var(--name);
-  letter-spacing: 0.05em; /* noticeable but restrained */
+  letter-spacing: 0.05em;
   text-transform: lowercase;
 }
 
-/* mobile: still slightly top-weighted, but less extreme; slightly tighter gap */
+/* mobile tuning */
 @media (max-width: 600px){
   .stack{
-    transform: translateY(-10vh);
+    transform: translateY(-16svh);  /* stronger upward shift for iPhone */
   }
 
   .name{
-    margin-top: 2.4rem;
+    margin-top: 2.4rem;             /* slightly tighter mobile gap */
   }
 }
