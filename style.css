@@ -34,7 +34,7 @@ body{
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-10vh);
+  transform: translateY(-14vh);
 }
 
 /* link row */
@@ -82,7 +82,7 @@ body{
 /* mobile: still slightly top-weighted, but less extreme; slightly tighter gap */
 @media (max-width: 600px){
   .stack{
-    transform: translateY(-8vh);
+    transform: translateY(-10vh);
   }
 
   .name{
