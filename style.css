@@ -43,7 +43,7 @@ body{
 .base{
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 20%;
   transform: translateX(-50%);
   margin-top: clamp(3.0rem, 6.0vh, 5.0rem); /* generous vertical gap */
 
