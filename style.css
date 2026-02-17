@@ -29,12 +29,12 @@ body{
   place-items: center;
 }
 
-/* move entire structure slightly upward */
+/* slightly top-weighted */
 .stack{
   display: flex;
   flex-direction: column;
   align-items: center;
-  transform: translateY(-8vh);
+  transform: translateY(-10vh);
 }
 
 /* link row */
@@ -68,10 +68,10 @@ body{
   outline-offset: 4px;
 }
 
-/* name below links */
+/* name below links: gently articulated gap */
 .name{
   margin: 0;
-  margin-top: 2.6rem;     /* desktop gap */
+  margin-top: 3.0rem;
   font-size: clamp(1rem, 1.8vw, 1.35rem);
   font-weight: 400;
   color: var(--name);
@@ -79,13 +79,13 @@ body{
   text-transform: lowercase;
 }
 
-/* tighten on small screens */
+/* mobile: still slightly top-weighted, but less extreme; slightly tighter gap */
 @media (max-width: 600px){
   .stack{
-    transform: translateY(-6vh);
+    transform: translateY(-8vh);
   }
 
   .name{
-    margin-top: 1.8rem;   /* tighter mobile gap */
+    margin-top: 2.4rem;
   }
 }
