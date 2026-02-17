@@ -1,14 +1,18 @@
 :root{
-  --bg: #FCFCFB;        /* gallery white */
-  --card: #F6F6F4;      /* barely darker plane */
-  --name: #8A8A8A;      /* lighter graphite */
-  --link: #555555;      /* mid graphite */
-  --linkHover: #444444; /* tiny darken (still mid) */
+  --bg: #FCFCFB;     /* gallery white */
+  --card: #F6F6F4;   /* subtle tonal lift */
+  --name: #888888;   /* lighter graphite */
+  --link: #555555;   /* mid graphite */
+  --hover: #444444;
 }
 
-*{ box-sizing: border-box; }
+*{
+  box-sizing: border-box;
+}
 
-html, body{ height: 100%; }
+html, body{
+  height: 100%;
+}
 
 body{
   margin: 0;
@@ -18,72 +22,70 @@ body{
   text-rendering: geometricPrecision;
 }
 
+/* center whole composition */
 .stage{
-  position: relative;
   height: 100vh;
-  width: 100%;
+  display: grid;
+  place-items: center;
 }
 
-/* name: perfectly centered on the page */
-.name{
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
-
-  font-size: clamp(1.1rem, 2.0vw, 1.45rem); /* smaller than links */
-  font-weight: 400;
-  color: var(--name);
-  letter-spacing: 0.05em; /* noticeable, not loud */
-  text-transform: lowercase;
-}
-
-/* base: generous distance below the centered name */
-.base{
-  position: absolute;
-  left: 50%;
-  top: 20%;
-  transform: translateX(-50%);
- .name {
-  margin-top: 3rem;
-}
-
+/* move entire structure slightly upward */
+.stack{
   display: flex;
-  gap: clamp(1.25rem, 4.0vw, 2.5rem);
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  transform: translateY(-8vh);
 }
 
-/* subtle “paper on paper” cards */
+/* link row */
+.base{
+  display: flex;
+  gap: clamp(1.2rem, 4vw, 2.4rem);
+}
+
+/* subtle cards */
 .cardlink{
   display: inline-block;
   background: var(--card);
-  padding: 0.35rem 0.6rem; /* tight around words */
-  color: var(--link);
-
-  font-size: clamp(1.15rem, 2.2vw, 1.6rem); /* slightly larger than name */
-  font-weight: 400;
-  letter-spacing: 0;       /* normal spacing */
-  text-transform: lowercase;
-
+  padding: 0.35rem 0.6rem;
   text-decoration: none;
+
+  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
+  font-weight: 400;
+  color: var(--link);
+  text-transform: lowercase;
+  letter-spacing: 0;
 }
 
 .cardlink:hover{
-  color: var(--linkHover);
+  color: var(--hover);
   text-decoration: underline;
-  text-underline-offset: 0.22em;
+  text-underline-offset: 0.2em;
 }
 
-/* keep it keyboard-usable without adding “UI chrome” */
 .cardlink:focus-visible{
   outline: 2px solid currentColor;
   outline-offset: 4px;
 }
 
-/* small screens: preserve triangle feel without crowding */
-@media (max-width: 420px){
-  .base{ gap: 1.1rem; }
-  .cardlink{ padding: 0.33rem 0.55rem; }
+/* name below links */
+.name{
+  margin: 0;
+  margin-top: 2.6rem;     /* desktop gap */
+  font-size: clamp(1rem, 1.8vw, 1.35rem);
+  font-weight: 400;
+  color: var(--name);
+  letter-spacing: 0.05em; /* noticeable but restrained */
+  text-transform: lowercase;
+}
+
+/* tighten on small screens */
+@media (max-width: 600px){
+  .stack{
+    transform: translateY(-6vh);
+  }
+
+  .name{
+    margin-top: 1.8rem;   /* tighter mobile gap */
+  }
 }
