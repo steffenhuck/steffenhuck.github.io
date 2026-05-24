@@ -1,9 +1,9 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://steffenhuck.github.io/sitemap_home.xml
-Sitemap: https://steffenhuck.github.io/work/sitemap_work.xml
-Sitemap: https://steffenhuck.github.io/by-works/sitemap_byworks.xml
-Sitemap: https://steffenhuck.github.io/plays/sitemap_plays.xml
-Sitemap: https://steffenhuck.github.io/dialogues/sitemap_dialogues.xml
+Sitemap: https://steffenhuck.github.io/sitemap.xml
+Sitemap: https://steffenhuck.github.io/work/sitemap.xml
+Sitemap: https://steffenhuck.github.io/by-works/sitemap.xml
+Sitemap: https://steffenhuck.github.io/plays/sitemap.xml
+Sitemap: https://steffenhuck.github.io/dialogues/sitemap.xml
 Sitemap: https://steffenhuck.github.io/fundraising/sitemap.xml
