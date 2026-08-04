@@ -8,15 +8,15 @@
     http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <url>
-    <loc>https://steffenhuck.github.io/index.html</loc>
+    <loc>https://steffenhuck.github.io/</loc>
   </url>
 
   <url>
-    <loc>https://steffenhuck.github.io/work/index.html</loc>
+    <loc>https://steffenhuck.github.io/work/</loc>
   </url>
 
   <url>
-    <loc>https://steffenhuck.github.io/by-works/index.html</loc>
+    <loc>https://steffenhuck.github.io/by-works/</loc>
   </url>
 
 </urlset>
