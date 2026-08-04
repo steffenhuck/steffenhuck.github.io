@@ -2,8 +2,9 @@ User-agent: *
 Allow: /
 
 Sitemap: https://steffenhuck.github.io/sitemap.xml
-Sitemap: https://steffenhuck.github.io/work/sitemap.xml
-Sitemap: https://steffenhuck.github.io/by-works/sitemap.xml
-Sitemap: https://steffenhuck.github.io/plays/sitemap.xml
-Sitemap: https://steffenhuck.github.io/dialogues/sitemap.xml
-Sitemap: https://steffenhuck.github.io/fundraising/sitemap.xml
+
+# Sitemap: https://steffenhuck.github.io/work/sitemap.xml
+# Sitemap: https://steffenhuck.github.io/by-works/sitemap.xml
+# Sitemap: https://steffenhuck.github.io/plays/sitemap.xml
+# Sitemap: https://steffenhuck.github.io/dialogues/sitemap.xml
+# Sitemap: https://steffenhuck.github.io/fundraising/sitemap.xml
